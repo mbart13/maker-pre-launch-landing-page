@@ -1,7 +1,6 @@
 @use 'abstracts' as *;
 
 .email-form {
-  margin-bottom: 5rem;
   position: relative;
 
   @include breakpoint-up("tablet") {

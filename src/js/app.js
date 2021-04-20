@@ -13,8 +13,10 @@ const handleSubmit = (e) => {
   let errorMsg = ''
 
   if (!input.value) {
-    errorMsg= 'Oops! Please add your email'
-  } else if (!checkEmail(input.value)) {
+    errorMsg = 'Oops! Please add your email'
+  }
+
+  if (input.value && !checkEmail(input.value)) {
     errorMsg = 'Oops! That doesn\'t look like an email address'
   }
 
@@ -24,6 +26,7 @@ const handleSubmit = (e) => {
 
   parent.classList.add('is-error');
   msg.innerText = errorMsg;
+
 };
 
 const handleInput = () => {
