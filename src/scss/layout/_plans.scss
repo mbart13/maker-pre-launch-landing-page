@@ -2,6 +2,7 @@
 
 .pricing-plans {
   max-width: 57.375rem;
+  margin: 0 auto;
 
   @include breakpoint-up('desktop') {
     display: flex;
