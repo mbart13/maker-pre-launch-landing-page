@@ -1,0 +1,19 @@
+@use 'abstracts' as *;
+
+.footer {
+  position: relative;
+  margin-top: 5rem;
+
+  @include breakpoint-up('tablet') {
+    &::after {
+      content: '';
+      position: absolute;
+      background: url('../assets/bg-footer-squiggle.svg') no-repeat center/contain;
+      width: 100%;
+      height: 9rem;
+      z-index: -1;
+      top: 0;
+    }
+  }
+
+}

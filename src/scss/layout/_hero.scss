@@ -1,0 +1,105 @@
+@use 'abstracts' as *;
+
+.hero {
+  overflow-x: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    background: url('../assets/illustration-hero-mobile.png') no-repeat center / contain;
+    width: 26rem;
+    height: 15rem;
+    margin: 0 auto;
+
+    @include breakpoint-up('tablet') {
+      display: none;
+    }
+  }
+
+  &__title {
+    color: $color-white;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    max-width: 15.62rem;
+    margin: 0 auto 1.5rem;
+
+    span {
+      color: $color-accent;
+    }
+
+    @include breakpoint-up('tablet') {
+      max-width: unset;
+    }
+
+    @include breakpoint-up('desktop') {
+      font-size: 3rem
+    }
+  }
+
+  &__body {
+    font-size: .9375rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint-up('desktop') {
+      max-width: 80%;
+      margin: 0 auto 6rem;
+    }
+  }
+
+  &__scroll-link {
+    text-align: center;
+
+    &:focus img {
+      outline: none;
+      border: 2px dotted $color-red;
+    }
+    img {
+      display: inline;
+    }
+  }
+}
+
+.hero__banner {
+  padding: 3rem 1rem;
+  text-align: center;
+  max-width: 28.75rem;
+  position: relative;
+  margin: 0 auto;
+
+  @include breakpoint-up('tablet') {
+    background: url('../assets/bg-hero-squiggle.svg') no-repeat center / 80%;
+    padding: 3rem 0;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 21rem;;
+      height: 100%;
+      background-size: contain;
+      top: 0;
+
+      @include breakpoint-up('desktop') {
+        width: 29rem;
+      }
+    }
+
+    &::before {
+      transform: translateX(-100%);
+      left: 0;
+      background: url('../assets/illustration-hero-left.svg') no-repeat left/contain;
+    }
+
+    &::after {
+      transform: translateX(100%);
+      right: 0;
+      background: url('../assets/illustration-hero-right.svg') no-repeat right/contain;
+    }
+  }
+
+  @include breakpoint-up('desktop') {
+    max-width: 42rem;
+    background: url('../assets/bg-hero-squiggle.svg') no-repeat top / 75%;
+  }
+}

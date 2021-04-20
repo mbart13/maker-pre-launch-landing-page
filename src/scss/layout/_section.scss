@@ -1,0 +1,31 @@
+@use 'abstracts' as *;
+
+.section {
+  margin-top: 8.75rem;
+
+  &__title,
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__title {
+    color: $color-white;
+    font-size: 1.5rem;
+    max-width: 15ch;
+    margin: 0 auto 1.6875rem;
+    line-height: 1.4;
+
+    @include breakpoint-up('tablet') {
+      max-width: 22ch;
+    }
+}
+
+  &__subtitle  {
+    max-width: 37.6875rem;
+    margin: 0 auto 3.5rem;
+
+    @include breakpoint-up('desktop') {
+      margin-bottom: 5.5rem;
+    }
+  }
+}

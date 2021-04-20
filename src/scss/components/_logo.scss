@@ -1,0 +1,15 @@
+@use 'abstracts' as *;
+
+.logo {
+  padding: 2.5rem 0 4rem;
+  margin: 0 auto;
+
+  @include breakpoint-up('tablet') {
+    margin: 0;
+    padding-left: 2.5rem;
+  }
+
+    @include breakpoint-up('desktop') {
+    padding-left: 10.31rem;
+  }
+}

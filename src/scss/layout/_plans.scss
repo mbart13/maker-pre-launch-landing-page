@@ -1,0 +1,11 @@
+@use 'abstracts' as *;
+
+.pricing-plans {
+  max-width: 57.375rem;
+
+  @include breakpoint-up('desktop') {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,19 @@
+@use 'abstracts' as *;
+
+.list-cta {
+  margin: 0;
+  list-style: none;
+
+  @include breakpoint-up('tablet') {
+    display: flex;
+    flex-direction: column;
+    max-width: 37rem;
+    margin: 0 auto;
+  }
+
+  @include breakpoint-up('desktop') {
+    flex-direction: row;
+    max-width: unset;
+    justify-content: space-between;
+  }
+}

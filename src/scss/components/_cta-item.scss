@@ -1,0 +1,96 @@
+@use 'abstracts' as *;
+
+.cta-item {
+  text-align: center;
+  margin-bottom: 3.5rem;
+
+  @include breakpoint-up('tablet') {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 2.5rem;
+  }
+
+  @include breakpoint-up('desktop') {
+    flex-direction: column;
+    align-items: stretch;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__img-container {
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 2.8rem;
+    background-color: $color-primary;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    @include breakpoint-up('tablet') {
+      margin-right: 3rem;
+      margin-left: 0;
+    }
+
+    @include breakpoint-up('desktop') {
+      margin-right: 0;
+      margin-bottom: 2rem;
+      width: 10rem;
+      height: 10rem;
+      margin-right: 0;
+    }
+  }
+
+  &__text {
+    margin-top: 1.5rem;
+
+    @include breakpoint-up('tablet') {
+      margin-top: 0;
+    }
+
+    @include breakpoint-up('desktop') {
+      max-width: 30ch;
+    }
+  }
+
+  &__title {
+    color: $color-white;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+
+  &__body {
+    line-height: 1.7;
+    max-width: 32ch;
+    margin: 0 auto;
+
+    @include breakpoint-up('tablet') {
+      max-width: 36ch;
+    }
+  }
+
+  &--odd {
+    align-self: flex-end;
+
+    @include breakpoint-up('desktop') {
+      align-self: unset;
+    }
+  }
+
+  &--even {
+    align-self: flex-start;
+
+    @include breakpoint-up('desktop') {
+      align-self: unset;
+      padding-top: 3rem;
+    }
+  }
+}
+
+

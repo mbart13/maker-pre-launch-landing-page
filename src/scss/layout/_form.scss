@@ -1,0 +1,31 @@
+@use 'abstracts' as *;
+
+.email-form {
+  margin-bottom: 5rem;
+  position: relative;
+
+  @include breakpoint-up("tablet") {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__error-msg {
+    color: $color-red;
+    font-size: 0.75rem;
+    padding: 0.5rem 0 0 1rem;
+    display: none;
+  }
+
+  &__text-input-wrapper {
+    @include breakpoint-up("tablet") {
+      flex: 1 1 75%;
+      margin-right: 1rem;
+      max-width: 21rem;
+    }
+  }
+}
+
+.is-error .email-form__error-msg {
+  display: block;
+}
