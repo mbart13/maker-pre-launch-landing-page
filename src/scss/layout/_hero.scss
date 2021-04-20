@@ -51,8 +51,7 @@
     text-align: center;
 
     &:focus img {
-      outline: none;
-      border: 2px dotted $color-red;
+      outline: 2px dotted $color-red;
     }
     img {
       display: inline;
