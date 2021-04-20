@@ -29,7 +29,7 @@
     }
 
     @include breakpoint-up('tablet') {
-      max-width: unset;
+      max-width: 16ch;
     }
 
     @include breakpoint-up('desktop') {
