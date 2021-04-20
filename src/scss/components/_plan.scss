@@ -12,6 +12,10 @@
     flex: 0 0 calc(50% - 2rem);
   }
 
+  &__title {
+    margin-bottom: 1.0625rem;
+  }
+
   &::before {
     content: '';
     position: absolute;
