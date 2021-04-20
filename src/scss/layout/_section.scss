@@ -17,6 +17,7 @@
 
     @include breakpoint-up('tablet') {
       max-width: 22ch;
+      font-size: 2rem;
     }
 }
 
